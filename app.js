@@ -4,7 +4,9 @@
 //          G-mail : ahnaf.rahmn@gmail.com
 
 //==================================================================>>>
-let p1 = document.querySelector('.btn1'),
+let gridBox = document.querySelector('.container2'),
+msgBox = document.querySelector('.msg1'),
+p1 = document.querySelector('.btn1'),
 p2 = document.querySelector('.btn2'),
 p3 = document.querySelector('.btn3'),
 p4 = document.querySelector('.btn4'),
@@ -121,8 +123,14 @@ function winLine(tmpVar){
         } else{
             arrLine[tmpNum].classList.add('crossWinLine');
         }
-        sleep(1000).then(() => {
-            alert(`Team : "${winner}" won the game!!`);
+        sleep(1200).then(() => {
+            gridBox.classList.add('vanish');
+            msgBox.innerHTML = '';
+            msgBox.classList.add('msg');
+            msgBox.textContent = `Team : "${winner}" won the game!!`;
+        });
+        sleep(3000).then(() => {
+            
             location.reload();
         });
     }
