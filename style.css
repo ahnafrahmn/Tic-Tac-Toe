@@ -181,6 +181,46 @@ div{
     width: 650px;
 }
 
+
+/* ============================ Winning Message ======================= */
+
+
+
+
+.msg1{
+    background-color: transparent;
+    border-radius: 20px;
+    color: transparent;
+    font-size: 0px;
+    top: 0;
+    left: 0;
+}
+.msg{
+    background-color: rgba(0, 0, 0, 0.718);
+    border-radius: 20px;
+    color: gold;
+    font-size: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    animation-duration: 1s;
+    animation-name: winM;
+    animation-timing-function: ease;
+}
+@keyframes winM{
+    0%{
+        font-size: 20px;
+    }
+    80%{
+        font-size: 100px;
+    }
+}
+
+
+
 /* ==================== Responsiveness ==================== */
 
 @media (max-width: 600px) {
@@ -273,4 +313,22 @@ div{
     }
 
 
+    
+.msg{
+    font-size: 30px;
+    padding: 5px;
+}
+@keyframes winM{
+    0%{
+        font-size: 10px;
+    }
+    80%{
+        font-size: 30px;
+    }
+}
+
+}
+
+.vanish{
+    display: none;
 }
