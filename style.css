@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&family=Mooli&family=Noto+Sans:wght@600&family=PT+Sans:wght@700&family=Pacifico&family=Poppins:wght@700&family=Roboto&family=Roboto+Slab&family=Source+Code+Pro:ital,wght@1,500&display=swap');
+
+body{
+    background-color: darksalmon;
+    font-family: 'PT Sans', sans-serif;
+    font: bold 700;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container1{
+    justify-content: start;
+    padding: 60px;
+}
+.container2{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 700px;
+    height: 750px;
+    border-radius: 20px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.turn{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+.turnWindow{
+    
+    width: 220px;
+    height: 60px;
+    background-color: rgb(56, 78, 56);
+    border-radius: 5px;
+    font-size: x-large;
+    color: aqua;
+}
+
+.bright{
+    background-color: rgb(40, 197, 40);
+    color: black;
+}
+
+
+/* ---------------------------------  Grid Start  -------------------------------- */
+
+
+.grid{
+    height: 600px;
+    width: 600px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    gap: 1px;
+}
+.button{
+    max-height: 86%;
+    max-width: 86%;
+    min-height: 86%;
+    min-width: 86%;
+    margin: 2px;
+    padding: 11px;
+    background-color: rgb(127, 144, 144);
+    border-radius: 10px;
+    font-size: 80px;
+    color: rgb(127, 144, 144);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.button:hover{
+    background-color: cornsilk;
+    color: cornsilk;
+}
+
+.buttonClicked,
+.buttonClicked:hover{
+    background-color: cornsilk;
+    color: black;
+}
+
+
+/* -------------------------- Lines ------------------------ */
+
+.line{
+    border: 0px solid transparent;
+    border-radius: 10px; 
+    position: absolute;
+    z-index: 1;
+    transition: width 0.5s;
+}
+
+/* ------------------------- Vertical Lines --------------------- */
+
+.line1{
+    margin-right: 58%;
+    margin-top: 10%;
+    width: 0;
+    height: 0;
+    /* height: 500px; */
+}
+.line2{
+    margin-top: 10%;
+    margin-right: 0.4%;
+    width: 0;
+    height: 0;
+    /* height: 500px; */
+}
+.line3{
+    margin-left: 57.5%;
+    margin-top: 10%;
+    width: 0;
+    height: 0;
+    /* height: 500px; */
+}
+
+.verticalWinLine{
+    transition: height 0.7s;
+    border-radius: 10px; 
+    border: 5px solid rgb(154, 8, 8);
+    height: 500px;
+}
+
+/* ------------------------- Horizontal Lines --------------------- */
+
+.line4{
+    margin-left: 1%;
+    top: 28%;
+    width: 0;
+    height: 0;
+    /* width: 500px; */
+}
+.line5{
+    margin-left: 1%;
+    top: 54.5%;
+    width: 0;
+    height: 0;
+    /* width: 500px; */
+}
+.line6{
+    margin-left: 1%;
+    top: 81%;
+    width: 0;
+    height: 0;
+    /* width: 500px; */
+}
+
+.horizontalWinLine{
+    transition: width 0.7s;
+    border-radius: 10px; 
+    border: 5px solid rgb(154, 8, 8);
+    width: 500px;
+}
+
+/* ------------------------- Cross Lines --------------------- */
+
+.line7{
+    margin-left: 1%;
+    top: 55%;
+    width: 0;
+    height: 0;
+    transform: rotate(45deg);
+    /* width: 650px; */
+}
+.line8{
+    margin-left: 1%;
+    top: 54%;
+    width: 0;
+    height: 0;
+    transform: rotate(-45deg);
+    /* width: 650px; */
+}
+
+.crossWinLine{
+    transition: width 0.7s;
+    border-radius: 10px; 
+    border: 5px solid rgb(154, 8, 8);
+    width: 650px;
+}
