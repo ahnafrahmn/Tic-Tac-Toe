@@ -16,7 +16,7 @@ div{
 }
 .container2{
     margin-top: 10%;
-    margin-left: 10%;
+    margin-left: 5%;
     width: 700px;
     height: 750px;
     border-radius: 20px;
@@ -32,12 +32,11 @@ div{
     margin-bottom: 13px;
 }
 .turnWindow{
-    
     width: 220px;
     height: 60px;
     background-color: rgb(56, 78, 56);
     border-radius: 5px;
-    font-size: x-large;
+    font-size: xx-large;
     color: aqua;
 }
 
@@ -59,18 +58,18 @@ div{
     gap: 1px;
 }
 .button{
-    max-height: 86%;
-    max-width: 86%;
-    min-height: 86%;
-    min-width: 86%;
+    height: 170px !important;
+    width: 170px !important;
     margin: 2px;
     padding: 11px;
     background-color: rgb(127, 144, 144);
     border-radius: 10px;
-    font-size: 80px;
+    font-size: 500%;
     color: rgb(127, 144, 144);
     cursor: pointer;
     transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .button:hover{
     background-color: cornsilk;
@@ -180,4 +179,98 @@ div{
     border-radius: 10px; 
     border: 5px solid rgb(154, 8, 8);
     width: 650px;
+}
+
+/* ==================== Responsiveness ==================== */
+
+@media (max-width: 600px) {
+    .container1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .container2{
+        margin-top: 100px;
+        margin-left: 0;
+        width: 300px;
+        height: 350px;
+    }
+    .turn{
+        margin-top: 3px;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3px;
+    }
+    .turnWindow{
+        width: 80px;
+        height: 30px;
+        font-size: large;
+    }
+    .grid{
+        margin-top: 17px;
+        height: 280px;
+        width: 280px;
+        border-radius: 10px;
+        gap: 1px;
+    }
+    .button{
+
+        height: 65px !important;
+        width: 65px !important;
+        margin: 2px;
+        padding: 11px;
+        font-size: 500%;
+    }
+
+/*          =========== lines ========== */
+   
+    .line1{
+        margin-right: 63%;
+        margin-top: 16%;
+    }
+    .line2{
+        margin-top: 16%;
+        margin-right: 0.4%;
+    }
+    .line3{
+        margin-left: 63%;
+        margin-top: 16%;
+    }
+    .verticalWinLine{
+        height: 220px;
+    }
+
+
+
+
+    .line4{
+        top: 29%;
+    }
+    .line5{
+        top: 56%;
+    }
+    .line6{
+        top: 83%;
+    }
+    
+    .horizontalWinLine{
+        width: 220px;
+    }
+
+
+
+    .line7{
+        top: 56%;
+    }
+    .line8{
+        top: 55%;
+    }
+    
+    .crossWinLine{
+        width: 300px;
+    }
+
+
 }
