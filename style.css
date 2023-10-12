@@ -4,6 +4,7 @@ body{
     background-color: darksalmon;
     font-family: 'PT Sans', sans-serif;
     font: bold 700;
+    user-select: none;
 }
 div{
     display: flex;
@@ -15,7 +16,7 @@ div{
     padding: 60px;
 }
 .container2{
-    margin-top: 10%;
+    margin-top: 0;
     margin-left: 5%;
     width: 700px;
     height: 750px;
@@ -189,7 +190,6 @@ div{
 
 .msg1{
     background-color: transparent;
-    border-radius: 20px;
     color: transparent;
     font-size: 0px;
     top: 0;
@@ -197,7 +197,6 @@ div{
 }
 .msg{
     background-color: rgba(0, 0, 0, 0.718);
-    border-radius: 20px;
     color: gold;
     font-size: 100px;
     position: fixed;
@@ -327,6 +326,10 @@ div{
     }
 }
 
+}
+
+.gameStop{
+    pointer-events: none;
 }
 
 .vanish{
