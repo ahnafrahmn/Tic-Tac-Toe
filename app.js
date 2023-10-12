@@ -123,6 +123,7 @@ function winLine(tmpVar){
         } else{
             arrLine[tmpNum].classList.add('crossWinLine');
         }
+        gridBox.classList.add('gameStop');
         sleep(1200).then(() => {
             gridBox.classList.add('vanish');
             msgBox.innerHTML = '';
@@ -130,7 +131,6 @@ function winLine(tmpVar){
             msgBox.textContent = `Team : "${winner}" won the game!!`;
         });
         sleep(3000).then(() => {
-            
             location.reload();
         });
     }
